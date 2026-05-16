@@ -1,0 +1,275 @@
+/* =====================================================
+   RESET & GLOBALE STILE
+   ===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  /* Serifenlose Schrift für den gesamten Body */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Serifenschrift für Überschriften */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* =====================================================
+   HEADER / NAVIGATION
+   ===================================================== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Minimalistisches Logo: nur Initialen "OS" */
+.logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+}
+
+/* Kontakt-Button im Header */
+.cta-contact {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #16a085;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.cta-contact:hover {
+  background-color: #117a65;
+}
+
+/* =====================================================
+   MAIN CONTENT
+   ===================================================== */
+.site-main {
+  flex: 1;
+  padding: 0;
+}
+
+/* =====================================================
+   HERO-BEREICH (Vertikales Layout mit Flexbox)
+   ===================================================== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Linke Seite: Profilbild-Platzhalter */
+.hero-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grauer Kreis als Platzhalter (200px) */
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  object-fit: cover;
+  display: block;
+}
+
+/* Rechte Seite: Große Überschrift und Button */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Große Hero-Überschrift in Serifenschrift */
+.hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+/* Unterüberschrift/Subtitle */
+.hero-subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  color: #16a085;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+/* Primärer CTA-Button */
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #16a085;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.btn-primary:hover {
+  background-color: #117a65;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(22, 160, 133, 0.3);
+}
+
+/* =====================================================
+   FEATURES GRID (3 Spalten)
+   ===================================================== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Einzelne Feature-Karte */
+.feature-card {
+  padding: 2rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+.feature-card:hover {
+  border-color: #16a085;
+  box-shadow: 0 4px 16px rgba(22, 160, 133, 0.1);
+  transform: translateY(-4px);
+}
+
+/* Icon-Container */
+.feature-icon {
+  font-size: 2.5rem;
+  color: #16a085;
+  margin-bottom: 1rem;
+}
+
+/* Feature-Überschriften */
+.feature-card h3 {
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+  font-size: 1.3rem;
+}
+
+/* Feature-Text */
+.feature-card p {
+  color: #666666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Links in Feature-Karten */
+.feature-card a {
+  color: #16a085;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.feature-card a:hover {
+  color: #117a65;
+  text-decoration: underline;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #f0f0f0;
+  background-color: #fafafa;
+  color: #999999;
+  font-size: 0.9rem;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN (Mobile First)
+   ===================================================== */
+@media (max-width: 768px) {
+  /* Hero: Stack vertikal statt horizontal */
+  .hero {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  /* Header kompakter */
+  .site-header {
+    padding: 1rem 1rem;
+  }
+
+  /* Features Grid: 1 Spalte auf Mobilgeräten */
+  .features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Ende der CSS-Datei */
